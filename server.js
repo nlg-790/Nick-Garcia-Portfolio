@@ -14,13 +14,16 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/home.html');
   });
   
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER, 
-    pass: process.env.EMAIL_PASS,
-  },
-});
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.aol.com',
+    port: 465,  
+    secure: true, 
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+  
 
 app.post('/send', (req, res) => {
   const { name, email, message } = req.body;
