@@ -8,7 +8,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/home.html');
+  });
+  
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -41,3 +46,4 @@ app.post('/send', (req, res) => {
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
 });
+
