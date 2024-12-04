@@ -1,147 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    color: #2e2e2e;
-    background-color: #f5f5f5;
-  }
-  
-  header {
-    background-color: #ffd9b3;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: #2e2e2e;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 8px 12px;
-    transition: color 0.3s, background-color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #fff;
-    background-color: #ff8c42;
-    border-radius: 4px;
-  }
-  
-  .projects {
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  .projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #ff8c42;
-  }
-  
-  .project-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #2e2e2e;
+  background-color: #f5f5f5;
+}
 
-  .project-card-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
+header {
+  background-color: #ffd9b3;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #2e2e2e;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #ff8c42;
+  border-radius: 4px;
+}
+
+.projects {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff8c42;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card {
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 1.7rem;
+  padding: 15px;
+  background-color: #ff8c42;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.project-description {
+  padding: 20px;
+  color: #4d4d4d;
+  font-size: 1.1rem;
+  text-align: left;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+}
+
+footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ff8c42;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffe0b3;
+}
+
+@media (max-width: 1200px) {
   .project-card {
-    background: #fff;
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
     width: 100%;
-    max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: none;
   }
-  
-  .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-thumbnail {
-    width: 100%;
-    height: 300px; 
-    object-fit: cover;
-  }
-  
-  .project-card h3 {
-    font-size: 1.7rem;
-    padding: 15px;
-    background-color: #ff8c42;
-    color: #fff;
-    margin: 0;
-    text-align: center;
-    text-decoration: none;
+
+  .projects h2 {
+    font-size: 2rem;
   }
 
   .project-description {
-    padding: 20px;
-    color: #4d4d4d;
-    font-size: 1.1rem;
-    text-align: left;
-    background-color: #fafafa;
-    border-top: 1px solid #ddd;
+    font-size: 1rem;
   }
-  
-  footer {
-    background-color: #2e2e2e;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9rem;
-  }
-  
-  footer a {
-    color: #ff8c42;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  footer a:hover {
-    color: #ffe0b3;
-  }
-  
-  @media (max-width: 1200px) {
-    .project-card {
-      max-width: 750px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .project-card {
-      width: 100%;
-      max-width: none;
-    }
-  
-    .projects h2 {
-      font-size: 2rem;
-    }
-  
-    .project-description {
-      font-size: 1rem;
-    }
-  }
+} 
   
